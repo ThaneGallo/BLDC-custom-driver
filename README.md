@@ -7,5 +7,57 @@ An [ATMEGA32E5](https://www.microchip.com/en-us/product/ATxmega32E5) is a MCU cr
 ## Introduction 
 This project will be an entirely custom system from hardware to software to firmware and the development will be seperated into parts and can be found in folders which are to be linked below. 
 
-## Development 
-First the hardware was created, it was created with a few things in mind. One of which is that there are 0 ohm jumper resistors to and from the on board MCU to the components as well as pin headers to test the hardware components using an external device if the MCU is not set up properly (This is my first time creating a custom embedded board)
+
+As this system contains custom hardware and software I decided to split up into other files for ease of reading with the links below:
+
+# Table of Contents
+* [Skills Utilized](#Skills-Utilized)
+* [System Diagram](#System-Diagram)
+* [Hardware Design](#Hardware-Design)
+* [Software Design](#Software-Design)
+* [Known Issues](#Known-Issues)
+* [Conclusion](#Conclusion)
+* [Acknowledgements](#Acknowledgements)
+
+# Skills Utilized
+Hardware:
+* KiCAD
+* MCU Integration
+* Motor Controls
+* BLDC
+* Power system design
+* 4-Layer-PCB
+
+Software:
+* C++/C
+* HAL / Device Drivers
+* Control Systems
+* Matlab/Simulink
+
+# System Diagram
+
+
+![System Diagram](Documentation/Images/System_Diagram_Guitar_Pedal.png "System Diagram")
+
+# Hardware Deisgn
+
+The hardware development at a top level essentially boils down to creating an ATMEGA32E5 Development board. This includes GPIO, I2C buses, Timer peripherals as well as gate driver circuitry for the BLDCs Mosfets. 
+
+Click [here]() for the in-depth development.
+
+
+# Software Design
+
+The software is mainly firmware for getting the MCU to interface with the motor driver but I had used Simulink in order to test and figure out timings and how to structure my control loop and test it before it is made. 
+
+Click one of the following to see the in-depth development
+
+[Simulation]()
+[Firmware]()
+
+# Known Issues
+
+# Conclusion
+
+# Acknowledgements
+
