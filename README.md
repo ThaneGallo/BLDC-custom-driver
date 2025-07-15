@@ -52,8 +52,8 @@ The software is mainly firmware for getting the MCU to interface with the motor 
 
 Click one of the following to see the in-depth development
 
-* [Simulation]()
-* [Firmware]()
+* [Simulation](Documentation/simulation.md)
+* [Firmware](Documentation/firmware.md)
 
 # Known Issues
 
