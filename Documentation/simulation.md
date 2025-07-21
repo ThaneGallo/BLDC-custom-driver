@@ -8,7 +8,7 @@ This is modelling an IDEAL system as it makes certain assumptions in the modelli
 
 ## Simulink Diagram
 
-[System_Diagran](Documentation/photos/bldc_full_simulink_model.png)
+[System_Diagran](photos/bldc_full_simulink_model.png)
 
 ### Blocks and Explainations
 Below I will explain all of the block and a high level view of how they work and what they do. The overall file is downloadable and within this repo [here]().
