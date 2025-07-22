@@ -74,7 +74,7 @@ Damping Constant - 0.0002
 ![Speed](photos/speed_scope.png)
 
 ### Angle (mechanical)
-![Mechanical Angle](photos/mehanical_angle_scope.png)
+![Mechanical Angle](photos/mechanical_angle_scope.png)
 
 The above graph shows the angle in radians transitioning faster as time goes forward as the motor also speed spins faster.
 
