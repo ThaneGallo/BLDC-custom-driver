@@ -8,7 +8,8 @@ This is modelling an IDEAL system as it makes certain assumptions in the modelli
 
 ## Simulink Diagram
 
-[System_Diagran](photos/bldc_full_simulink_model.png)
+![BLDC Full Simulink Model](photos/bldc_full_simulink_model.png)
+
 
 ### Blocks and Explainations
 Below I will explain all of the block and a high level view of how they work and what they do. The overall file is downloadable and within this repo [here]().
@@ -46,7 +47,44 @@ The outputs are as follows:
 * Theta_E (electrical angle in radians)
 * Hall Sensors (binay communication signal for hall sensor states)
 
-## Analysis
+## Analysis 
+
+My current parameters for all blocks are as follows and should not be used as a one size fits all solution as in the real world should adjust accordingly. For example, My current control loop is for speed and just stabilizes the motor at the deisred speed and thankfully due to tuning allows minimal overshoot with the proportinal gain and a quick stabilization with the integral gain.
+
+#### PID Controller
+Kp - 0.8
+Ki - 30
+Kd - 0 (for speed control)
+Maximum RPM - 1000
+
+#### Inverter Driver
+Voltage Rail - 150
+
+#### BLDC 
+Inductance of stator  - 0.00272 H
+Resistance of stator  - 0.7 Ohm
+Torque Constant - 0.049
+Pole pairs - 2
+Torque Load - 0.01 (should be above 0 to simulate the load of the axel)
+Back Emf Constant - 0.1128
+Motor Inertia - 0.0002
+Damping Constant - 0.0002
+
+### Speed
+![Speed](photos/speed_scope.png)
+
+### Angle (mechanical)
+![Mechanical Angle](photos/mehanical_angle_scope.png)
+
+The above graph shows the angle in radians transitioning faster as time goes forward as the motor also speed spins faster.
+
+### Back EMF
+![Back EMF Scope](photos/back_emf_scope.png)
+
+The above graph shows a trapezoidal communicaton and was chosen for its middle ground of control.
+
+## Conclusion
+Overall a good experience developing my skill in Simulink as well as having a better understanding of the internal dynamics of the brushless motor. I believe this will make development of the controller hardware much easier and if desired I will be able to utilize this block in the future for modelling more complex systems.
 
 
 ## Acknowledgements
